@@ -7,9 +7,11 @@ import {
     NavbarBrand,
     Nav,
     NavItem,
-    NavLink,
 } from 'reactstrap';
-// import StyleNav from './navbar-styles';
+
+import {Link} from 'react-router-dom';
+
+
 export default function Menu() {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -20,18 +22,18 @@ export default function Menu() {
         <>
 
             <Navbar className="navbar" expand="md">
-                <NavbarBrand className="logo" href="/">Scoleta</NavbarBrand>
+                <NavbarBrand className="logo" to="/">Scoleta</NavbarBrand>
                 <NavbarToggler className="toggle" onClick={toggle} ><FaBars /></NavbarToggler>
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="mr-auto menu" navbar>
                     <NavItem className="menu-item">
-                            <NavLink href="#Header">Home</NavLink>
+                            <Link to="/">Home</Link>
                         </NavItem>
                         <NavItem className="menu-item">
-                            <NavLink href="/products">Nossos Produtos</NavLink>
+                            <Link to="/point">Nossos Produtos</Link>
                         </NavItem>
                         <NavItem className="menu-item">
-                            <NavLink href="/Login">Preços</NavLink>
+                            <Link to="./">Login</Link>
                         </NavItem>
 
                     </Nav>

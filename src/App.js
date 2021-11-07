@@ -1,10 +1,12 @@
-import './App.css';
-import Menu from './components/Menu';
+import './App.scss';
+import Login from './Pages/Login';
+import Rotas from './routes';
 
 function App() {
   return (
     <div className="App">
-      <Menu/>
+      {/* <Rotas/> */}
+      <Login/>
     </div>
   );
 }
